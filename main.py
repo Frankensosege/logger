@@ -14,7 +14,7 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('PyCharm')
     print("=======")
-    log = myLog().get_logger(__name__)
+    log = myLog('Main').get_logger(__name__)
     log.info("sasasas")
     print("asdasda")
 

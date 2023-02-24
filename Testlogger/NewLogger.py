@@ -1,8 +1,10 @@
 import logging
 
 class MyLogger():
+    def __init__(self, module_name):
+        self.modul_name = module_name
     def get_logger(self, name=None):
-        logger = logging.getLogger(name)
+        logger = logging.getLogger(self.modul_name + ' : ' + name)
         logger.setLevel(logging.DEBUG)
         formatter = logging.Formatter("%(asctime)s - %(levelname)s - [%(funcName)s:%(lineno)d] - %(message)s")
         console = logging.StreamHandler()
